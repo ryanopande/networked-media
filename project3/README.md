@@ -1,4 +1,4 @@
-# Cats of NYUAD (EJS)
+# Cats of NYUAD 
 
 Minimal Express + EJS backend that renders your pages as templates and stores user-generated content on disk under `assets/uploads/` (no database).
 
@@ -6,7 +6,7 @@ Minimal Express + EJS backend that renders your pages as templates and stores us
 
 ```bash
 npm install
-npm run dev
+npm start
 # open http://localhost:3000
 ```
 
@@ -30,7 +30,3 @@ npm run clean
 server.js    # express app
 ```
 
-## Notes
-- No DB, no auth, deliberately simple.
-- `/diary` renders the two most recent entries (if any).
-- Health endpoint: `/healthz`.
