@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cats of NYUAD – Cover</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="cover-body">
+  <%- include('partials/nav', { active }) %>
+
+  <main class="cover cover--simple" role="main" aria-label="Notebook cover">
+    <!-- NEW: book-like frame -->
+    <div class="cover-book">
+      <div class="cover-card">
+        <h1 class="cover-heading">NYUAD</h1>
+        <h2 class="cover-subheading">Day in the life as a cat in NYUAD</h2>
+        <img class="cover-cat" src="/images/catface.png" alt="Cat face illustration" />
+      </div>
+
+      <!-- Open the diary (paw lives inside the book so it hugs the corner) -->
+      <a class="cover-paw paw-hotspot" href="/diary" aria-label="Open diary"></a>
+    </div>
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

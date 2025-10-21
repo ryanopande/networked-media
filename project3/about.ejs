@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About & Contact – Cats of NYUAD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="walking-cat"></div>
+  <%- include('partials/nav', { active }) %>
+
+  <main class="notebook notebook--about" role="main" aria-label="Two-page About & Contact spread">
+    <!-- LEFT PAGE: ABOUT -->
+    <section class="page page--left">
+      <h1 class="page__title">About</h1>
+      <p class="lead">
+        A little campus journal to celebrate our feline community by the students. Browse through recent sightings, share your own and help keep the cats safe.
+      </p>
+
+      <h2 class="page__title" style="font-size:1.4rem;margin-top:2rem;">How to use this site</h2>
+      <ul class="catwatch-list">
+        <li><strong>Open the diary:</strong> From the cover, tap the paw to enter the diary.</li>
+        <li><strong>Flip pages:</strong> Use the bottom paw on each page to move backward/forward.</li>
+        <li><strong>Share an entry:</strong> On “Share Entries,” add a cat name, photo URL, and a short note.</li>
+        <li><strong>Oldest & newest:</strong> The newest entry appears on the left of the first spread; the oldest ends up on the right of the last spread.</li>
+      </ul>
+      <a class="paw-hotspot paw-prev" href="/report" aria-label="Back to Cat Watch"></a>
+    </section>
+
+    <div class="spiral" aria-hidden="true"></div>
+
+    <!-- RIGHT PAGE: CONTACT -->
+    <section class="page page--right">
+      <h1 class="page__title">Contact</h1>
+      <p class="lead">
+        Have a question, a correction, or want to help with campus cats?
+        Reach out through any of the channels below.
+      </p>
+
+      <ul class="catwatch-list">
+        <li><strong>Email:</strong> <a href="mailto:nyuad.cats@nyu.edu">nyuad.cats@nyu.edu</a></li>
+        <li><strong>Instagram:</strong> <a href="https://instagram.com/nyuadcats" target="_blank" rel="noopener">@nyuadcats</a></li>
+        <li><strong>Location:</strong> Campus Center next to Student life office</a></li>
+        <li><strong>Urgent campus issue:</strong> Contact campus security and the cat volunteers.</li>
+      </ul>
+
+      <img
+      class="contact-illustration"
+      src="/images/catface.png"
+      alt="Cat face doodle"
+      />
+      <img
+      class="contact-illustration contact-illustration--body"
+      src="/images/catbody.png"
+      alt="Cat body doodle"
+      />
+    </section>
+  </main>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
