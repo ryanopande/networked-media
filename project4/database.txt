@@ -1,0 +1,2 @@
+{"date":"11/5/2025, 9:44:35 PM","text":"my goat\r\n","timestamp":1762397075097,"_id":"Py9JWU6qk0xzWBRq"}
+{"date":"11/5/2025, 9:44:21 PM","text":"yess","timestamp":1762397061306,"_id":"XZHPBNA2y3lNFypv"}
