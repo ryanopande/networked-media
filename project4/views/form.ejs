@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>class 18 💖</title>
+        <link href="/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Add a Post</h1>
+        <form action="/post" method="POST" enctype="multipart/form-data">
+            <textarea name="text" placeholder="say something..."></textarea>
+            <input type="submit" value="add to database">
+        </form>
+
+        <h2>Recent Posts</h2>
+        <div class="posts">
+            <% if(posts && posts.length > 0){ %>
+                <% for(let post of posts){ %>
+                    <div class="post">
+                        <span><%= post.date %></span>
+                        <p><%= post.text %></p>
+                    </div>
+                <% } %>
+            <% } else { %>
+                <p>No posts yet. Be the first to add one!</p>
+            <% } %>
+        </div>
+    </body>
+</html>

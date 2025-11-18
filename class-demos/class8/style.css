@@ -1,0 +1,38 @@
+body{
+    background-color: navy;
+    height: 100vh;
+    margin: 0;
+}
+
+.content.container{
+    background-color: rgb(205,7,205);
+    padding: 10px;
+}
+
+.parent1{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 50%;
+}
+
+.child{
+    background-color: chartreuse;
+    height: 100px;
+    width: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rotate{
+    height: 100px;
+    width: 100px;
+    display: none;
+    /* margin-left: 50%; */
+    position: absolute;
+    /* left: 500px; */
+}

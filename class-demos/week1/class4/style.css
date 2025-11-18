@@ -1,0 +1,12 @@
+p{
+    color: yellow;
+    background-color: black;
+    border: solid cyan 3px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.special{
+    margin-top: 50px;
+}

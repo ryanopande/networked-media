@@ -1,0 +1,9 @@
+{"date": "11/12/2025, 1:19:36 PM","text": "elimu unayo ya kutosha","timestamp": 1762953576436,"_id": "5qG7Nr82Qwdpw8yq"},
+{"date": "11/12/2025, 1:19:13 PM","text": "msichana wa sura nzuri","timestamp": 1762953553218,"_id": "M4If9pQMc4io8Jy1"},
+{"date": "11/12/2025, 1:23:09 PM","text": "watu wote wastaarabu","timestamp": 1762953789160,"_id": "RgGPuBfq4Pdm76xd"},
+{"date": "11/12/2025, 1:19:52 PM","text": "hata ng′ambo ukaenda ukarudi","timestamp": 1762953592158,"_id": "lEhSrFC5AZ4HRRDe"},
+{"date": "11/12/2025, 1:24:20 PM","text": "Hakuna matata","timestamp": 1762953860450,"_id": "lLS76opqtCEDkgHQ"},
+{"date": "11/12/2025, 1:24:00 PM","text": "Kila rangi tunaipenda","timestamp": 1762953840660, "_id": "tsQWrY4A0spGsS4s"},
+{"date": "11/12/2025, 1:23:37 PM","text": "watu wa kenya hatuna ubaguzi","timestamp": 1762953817778,"_id": "uATbUpq0wKI8kQjQ"},
+{"date": "11/12/2025, 1:19:25 PM","text": "kitu gani kinakufanya usiolewe","timestamp": 1762953565136,"_id": "uQdaQ8wJh2V1v9LU"},
+{"date": "11/12/2025, 1:21:57 PM","text": "miaka yaenda mbio sana","timestamp": 1762953717816,"_id": "v0bWvB23CxfBTxZV"}

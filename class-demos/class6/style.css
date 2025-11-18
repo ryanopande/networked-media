@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+}
+
+p{
+    color: white;
+    background-color: black;
+    /* usually content on a webpage fills 60-80% of the page */
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.blue{
+    width: 300px;
+}
+
+#important{
+    position: absolute;
+    left: 10px;
+    margin-left: 0;
+    top: 0;
+
+}

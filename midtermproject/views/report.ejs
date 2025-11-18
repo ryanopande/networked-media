@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cat Watch & Report – Cats of NYUAD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="walking-cat"></div>
+  <%- include('partials/nav', { active }) %>
+  <% if (sent) { %><div class="flash" role="status" style="text-align:center;margin-top:8px;">Report submitted ✔</div><% } %>
+  <main class="notebook notebook--catwatch">
+    <section class="page page--left">
+      <h1 class="page__title">Cat Watch</h1>
+      <ul class="catwatch-list">
+        <li>Do not give the cats human food or feed them on the highline.</li>
+        <li>You can pet and play with the cats, but only if they let you.</li>
+        <li>If you come across a new or injured cat on campus, inform the campus-cat volunteers.</li>
+        <li>If you see someone mistreating a cat, inform the campus-cat caretakers.</li>
+        <li>Please note that campus cats are not allowed inside buildings.</li>
+      </ul>
+      <a class="paw-hotspot paw-prev" href="/add-entry" aria-label="Go to previous page (Share entry)"></a>
+      <img
+    class="catwatch-illustration"
+    src="/images/catface2.png"
+    alt="Cat doodle"
+    />
+    <img
+    class="catwatch-illustration catwatch-illustration--body"
+    src="/images/catbody2.png"
+    alt="Cat body doodle"
+    />
+
+    </section>
+    <div class="spiral" aria-hidden="true"></div>
+    <section class="page page--right">
+      <h1 class="page__title">Report</h1>
+      <img
+      class="report-illustration"
+      src="/images/catface.png"  
+      alt="Cat doodle"
+      />
+      <form method="POST" action="/reports" class="catwatch-report-form">
+        <div class="form-row">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-row">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="Where did you see the cat?" required />
+        </div>
+        <div class="form-row">
+          <label for="issue">Issue</label>
+          <textarea id="issue" name="issue" rows="4" placeholder="Describe what you observed" required></textarea>
+        </div>
+        <button type="submit" class="send-btn">SEND</button>
+      </form>
+      <a class="paw-hotspot paw-next" href="/about" aria-label="Go to next page (about/contact)"></a>
+    </section>
+  </main>
+  <script>
+  </script>
+</body>
+</html>
+

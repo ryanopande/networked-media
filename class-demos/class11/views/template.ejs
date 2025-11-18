@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Class 13</title>
+</head>
+<body>
+    <%- include("nav.ejs", {}) %>
+    <h1>This is an ejs file, but it looks like html</h1>
+
+    <!-- this is an open and closing bracket for using ejs -->
+    <!-- we need to wrap all js code inside bracket -->
+    <% %>
+
+    <!-- to display output we need  <%= %> -->
+    <% if(visible){ %>
+        <%= message %>
+    <%  } %>
+
+    <br />
+    
+    <%for(p of paths){%>
+        <h2> <%= p %></h2>
+        <p> this is the path</p>
+    <%  } %>
+    <%= paths[0] %>
+</body>
+</html>

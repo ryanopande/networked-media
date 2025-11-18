@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Class 18</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action="/add-post" method="POST" enctype="multipart/form-data">
+            <textarea name = "text" placeholder="say something..."></textarea>
+            <input type = "submit" value ="add to database">
+        </form>
+
+        <div class ="posts">
+            <% for (let post of posts){ %>
+                <span> <%= post.date %> </span>
+                <p><%= post.text %></p>
+            <% } %>
+        </div>
+    </body>
+</html>
