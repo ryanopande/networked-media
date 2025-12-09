@@ -10,19 +10,13 @@
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
-
-  <!-- Your CSS -->
   <link rel="stylesheet" href="/css/style.css">
-
-  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <!-- Inject server data for moments -->
+  <!-- Server data for moments -->
   <script>
     const momentsFromServer = JSON.parse(`<%- JSON.stringify(allMoments) %>`);
   </script>
-
-  <!-- Main JS -->
   <script defer src="/js/main.js"></script>
 </head>
 
@@ -40,21 +34,15 @@
     <!-- Map container -->
     <div id="map"></div>
 
-    <!-- View Moment Popup (shown when clicking an existing pin) -->
+    <!-- View Moment Popup when clicking an existing pin -->
     <div id="viewMomentPopup" class="popup-panel" style="display:none;">
       <h2>Memory</h2>
     
       <!-- Top: image + caption -->
       <div id="momentImageWrapper" class="moment-image-wrapper">
-        <!-- JS inserts <img> if there is one -->
       </div>
     
       <p id="momentCaption" class="moment-caption-text"></p>
-    
-      <!-- Optional audio -->
-      <div id="momentAudioWrapper" class="moment-audio-wrapper">
-        <!-- JS inserts button/player if there is audio -->
-      </div>
     
       <!-- Row: like + comments buttons -->
       <div class="moment-actions">
@@ -65,10 +53,9 @@
         <span id="commentCount" class="bubble-count">0</span>
       </div>
     
-      <!-- Comments box (hidden until 💬 is clicked) -->
+      <!-- Comments box hidden until 💬 is clicked -->
       <div id="commentsBox" class="comments-box" style="display:none;">
         <ul id="commentsList" class="comments-list">
-          <!-- JS will insert <li> comments here -->
         </ul>
     
         <!-- Add comment inside the box -->
@@ -80,10 +67,10 @@
     </div>
     
 
-    <!-- Add Moment Popup (shown when clicking empty map area) -->
+    <!-- Add Moment Popup shown when clicking empty map area -->
     <div id="addMomentPopup" class="popup-panel add-panel" style="display:none;">
       <h2>Add a New Moment</h2>
-      <p class="small-note">Click on a place in the map where this memory happened.</p>
+      <p>Click on a place in the map where this memory happened.</p>
 
       <form id="addMomentForm" action="/moment" method="POST" enctype="multipart/form-data">
 
