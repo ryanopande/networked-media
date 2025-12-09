@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home • NYUAD → NYC</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <%- include('partials/header') %>
+
+  <main class="home-container">
+
+    <section class="intro">
+      <h1>NYUAD → NYC</h1>
+      <p>
+        A personal map of my experience told as a letter to NYUAD study aways.  
+        Each pin marks a small moment from my time in New York—things I saw,
+        felt, or wished I could share with someone back home.
+      </p>
+    </section>
+
+    <section class="recent-moments">
+      <h2>Recent Moments</h2>
+
+      <div class="moment-grid">
+        <% if (typeof recentMoments !== 'undefined') { %>
+          <% recentMoments.forEach(m => { %>
+            <!-- Wrap each card in a link to /map?moment=<id> -->
+            <a href="/map?moment=<%= m._id %>" class="moment-card">
+              <% if (m.image) { %>
+                <img src="<%= m.image %>" alt="moment image">
+              <% } %>
+              <p class="moment-caption"><%= m.caption %></p>
+            </a>
+          <% }) %>
+        <% } %>
+      </div>
+    </section>
+
+    <div class="center-button">
+      <a href="/map" class="primary-btn">Explore the Map</a>
+    </div>
+
+  </main>
+
+</body>
+</html>

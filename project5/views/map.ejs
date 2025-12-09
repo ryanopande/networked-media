@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Map • NYUAD → NYC</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Inject server data for moments -->
+  <script>
+    const momentsFromServer = JSON.parse(`<%- JSON.stringify(allMoments) %>`);
+  </script>
+
+  <!-- Main JS -->
+  <script defer src="/js/main.js"></script>
+</head>
+
+<body>
+
+  <%- include('partials/header') %>
+
+  <main class="map-page">
+
+    <h1 class="map-title">My Moments in New York</h1>
+    <p class="map-instructions">
+      Click on an empty space to add a new moment. Click on a pin to view an existing one.
+    </p>
+
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- View Moment Popup (shown when clicking an existing pin) -->
+    <div id="viewMomentPopup" class="popup-panel" style="display:none;">
+      <h2>Memory</h2>
+    
+      <!-- Top: image + caption -->
+      <div id="momentImageWrapper" class="moment-image-wrapper">
+        <!-- JS inserts <img> if there is one -->
+      </div>
+    
+      <p id="momentCaption" class="moment-caption-text"></p>
+    
+      <!-- Optional audio -->
+      <div id="momentAudioWrapper" class="moment-audio-wrapper">
+        <!-- JS inserts button/player if there is audio -->
+      </div>
+    
+      <!-- Row: like + comments buttons -->
+      <div class="moment-actions">
+        <button id="likeButton" type="button" class="icon-btn">❤️</button>
+        <span id="likeCount" class="bubble-count">0</span>
+    
+        <button id="commentToggle" type="button" class="icon-btn">💬</button>
+        <span id="commentCount" class="bubble-count">0</span>
+      </div>
+    
+      <!-- Comments box (hidden until 💬 is clicked) -->
+      <div id="commentsBox" class="comments-box" style="display:none;">
+        <ul id="commentsList" class="comments-list">
+          <!-- JS will insert <li> comments here -->
+        </ul>
+    
+        <!-- Add comment inside the box -->
+        <form id="commentForm" class="comment-form">
+          <textarea id="commentText" name="commentText" rows="2" placeholder="Add a comment..." required></textarea>
+          <button type="submit" class="primary-btn">Post</button>
+        </form>
+      </div>
+    </div>
+    
+
+    <!-- Add Moment Popup (shown when clicking empty map area) -->
+    <div id="addMomentPopup" class="popup-panel add-panel" style="display:none;">
+      <h2>Add a New Moment</h2>
+      <p class="small-note">Click on a place in the map where this memory happened.</p>
+
+      <form id="addMomentForm" action="/moment" method="POST" enctype="multipart/form-data">
+
+        <label for="caption">Caption</label>
+        <textarea id="caption" name="caption" required></textarea>
+
+        <label for="image">Image</label>
+        <input id="image" type="file" name="image" required>
+
+        <!-- Hidden fields for location -->
+        <input type="hidden" name="lat" id="latInput">
+        <input type="hidden" name="lng" id="lngInput">
+
+        <button class="primary-btn" type="submit">Add to Map</button>
+      </form>
+    </div>
+
+  </main>
+
+</body>
+</html>
