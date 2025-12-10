@@ -105,6 +105,7 @@ a {
   margin-bottom: 0.6rem;
 }
 
+/* referenced from chatgpt */
 .moment-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
